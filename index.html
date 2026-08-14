@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,21 @@
     <title>Repositório - Programa Profissional</title>
 
     <style>
+
         * {
             box-sizing: border-box;
         }
 
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             background: #f5f7fa;
             color: #222;
         }
+
+        /* =========================
+           CABEÇALHO
+        ========================= */
 
         header {
             background: #173f67;
@@ -25,8 +31,8 @@
         }
 
         .topo {
-            max-width: 1100px;
-            margin: auto;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         header h1 {
@@ -35,9 +41,14 @@
         }
 
         header p {
-            margin-top: 8px;
+            margin: 8px 0 0;
             font-size: 16px;
         }
+
+
+        /* =========================
+           MENU
+        ========================= */
 
         nav {
             background: white;
@@ -46,10 +57,12 @@
         }
 
         .menu {
-            max-width: 1100px;
-            margin: auto;
+            max-width: 1200px;
+            margin: 0 auto;
+
             display: flex;
-            gap: 25px;
+            align-items: center;
+            gap: 30px;
         }
 
         .menu a {
@@ -58,234 +71,513 @@
             font-weight: bold;
         }
 
+        .menu a:hover {
+            color: #0d2d4d;
+        }
+
+
+        /* =========================
+           CONTEÚDO PRINCIPAL
+        ========================= */
+
         main {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 30px auto;
             padding: 0 20px;
         }
+
+
+        /* =========================
+           CAIXA DE BOAS-VINDAS
+        ========================= */
 
         .bem-vindo {
             background: white;
             padding: 25px;
             border-radius: 12px;
-            margin-bottom: 25px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
-        .pesquisa {
-            width: 100%;
-            padding: 14px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            font-size: 16px;
-            margin-top: 15px;
-        }
-
-        .titulo {
-            margin-top: 30px;
-            margin-bottom: 20px;
-            color: #173f67;
-        }
-
-        .categorias {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            align-items: stretch;
-        }
-
-        .categoria {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-
-            height: 240px;
-
-            display: flex;
-            flex-direction: column;
-        }
-
-        .categoria h3 {
-            color: #173f67;
+        .bem-vindo h2 {
             margin-top: 0;
             margin-bottom: 15px;
         }
 
-        .categoria p {
+        .bem-vindo p {
             margin: 0;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
+
+        /* =========================
+           CAMPO DE PESQUISA
+        ========================= */
+
+        .pesquisa {
+            width: 100%;
+
+            padding: 14px 16px;
+
+            margin-top: 18px;
+
+            border: 1px solid #ccc;
+            border-radius: 8px;
+
+            font-size: 16px;
+
+            outline: none;
+        }
+
+        .pesquisa:focus {
+            border-color: #173f67;
+        }
+
+
+        /* =========================
+           TÍTULO DAS CATEGORIAS
+        ========================= */
+
+        .titulo {
+            margin: 0 0 20px;
+
+            color: #173f67;
+        }
+
+
+        /* =========================
+           GRID DOS CARDS
+        ========================= */
+
+        .categorias {
+
+            display: grid;
+
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+
+            gap: 20px;
+
+            align-items: stretch;
+        }
+
+
+        /* =========================
+           CARDS
+        ========================= */
+
+        .categoria {
+
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+            min-height: 250px;
+
+            display: flex;
+            flex-direction: column;
+
+            /* Garante que todos os cards ocupem
+               exatamente o mesmo espaço */
+            height: 100%;
+        }
+
+        .categoria h3 {
+
+            color: #173f67;
+
+            margin: 0 0 15px;
+
+            font-size: 20px;
+        }
+
+        .categoria p {
+
+            margin: 0;
+
+            line-height: 1.5;
+
+            color: #333;
+        }
+
+
+        /* =========================
+           BOTÃO
+        ========================= */
+
         .categoria .botao {
-            display: inline-block;
-            width: fit-content;
+
+            display: block;
+
+            width: 100%;
 
             margin-top: auto;
 
-            padding: 10px 16px;
+            padding: 11px 16px;
 
             background: #173f67;
+
             color: white;
 
             text-decoration: none;
 
+            text-align: center;
+
             border-radius: 7px;
+
+            font-weight: bold;
+
+            transition: 0.2s;
         }
 
         .categoria .botao:hover {
-            opacity: 0.9;
+
+            background: #0f3152;
+
+            transform: translateY(-1px);
         }
 
+
+        /* =========================
+           SOBRE
+        ========================= */
+
+        #sobre {
+
+            margin-top: 30px;
+
+            margin-bottom: 0;
+        }
+
+
+        /* =========================
+           RODAPÉ
+        ========================= */
+
         footer {
+
             margin-top: 50px;
+
             padding: 25px;
+
             background: #173f67;
+
             color: white;
+
             text-align: center;
         }
 
+        footer p {
+            margin: 0;
+        }
+
+
+        /* =========================
+           TABLET
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .categorias {
+
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+
+            }
+
+        }
+
+
+        /* =========================
+           CELULAR
+        ========================= */
+
         @media (max-width: 600px) {
+
+            header {
+                padding: 25px 20px;
+            }
 
             header h1 {
                 font-size: 25px;
             }
 
+            header p {
+                font-size: 14px;
+            }
+
+
             .menu {
+
                 gap: 15px;
+
                 flex-wrap: wrap;
             }
 
-            .categorias {
-                grid-template-columns: 1fr;
+
+            main {
+
+                margin-top: 20px;
+
+                padding: 0 15px;
             }
 
-            .categoria {
-                height: 220px;
+
+            .bem-vindo {
+
+                padding: 20px;
+
             }
+
+
+            .categorias {
+
+                grid-template-columns: 1fr;
+
+                gap: 15px;
+            }
+
+
+            .categoria {
+
+                min-height: 220px;
+
+            }
+
         }
+
     </style>
+
 </head>
+
 
 <body>
 
-<header>
-    <div class="topo">
-        <h1>Programa Profissional</h1>
-        <p>Repositório de arquivos e produções</p>
-    </div>
-</header>
 
-<nav>
-    <div class="menu">
-        <a href="#">Início</a>
-        <a href="#arquivos">Arquivos</a>
-        <a href="#sobre">Sobre</a>
-    </div>
-</nav>
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
 
-<main>
+    <header>
 
-    <section class="bem-vindo">
-        <h2>Bem-vindo ao repositório</h2>
+        <div class="topo">
 
-        <p>
-            Este espaço reúne e organiza arquivos,
-            documentos e produções relacionados ao
-            Programa Profissional.
-        </p>
+            <h1>
+                Programa Profissional
+            </h1>
 
-        <input
-            type="text"
-            class="pesquisa"
-            placeholder="Pesquisar arquivos..."
+            <p>
+                Repositório de arquivos e produções
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         MENU
+    ========================== -->
+
+    <nav>
+
+        <div class="menu">
+
+            <a href="#">
+                Início
+            </a>
+
+            <a href="#arquivos">
+                Arquivos
+            </a>
+
+            <a href="#sobre">
+                Sobre
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         CONTEÚDO
+    ========================== -->
+
+    <main>
+
+
+        <!-- BOAS-VINDAS -->
+
+        <section class="bem-vindo">
+
+            <h2>
+                Bem-vindo ao repositório
+            </h2>
+
+            <p>
+                Este espaço reúne e organiza arquivos,
+                documentos e produções relacionados ao
+                Programa Profissional.
+            </p>
+
+
+            <input
+                type="text"
+                class="pesquisa"
+                placeholder="Pesquisar arquivos..."
+            >
+
+        </section>
+
+
+        <!-- CATEGORIAS -->
+
+        <h2
+            class="titulo"
+            id="arquivos"
         >
-    </section>
+            Categorias de arquivos
+        </h2>
 
-    <h2 class="titulo" id="arquivos">
-        Categorias de arquivos
-    </h2>
 
-    <section class="categorias">
+        <section class="categorias">
 
-        <div class="categoria">
-            <h3>Artigos</h3>
+
+            <!-- ARTIGOS -->
+
+            <div class="categoria">
+
+                <h3>
+                    Artigos
+                </h3>
+
+                <p>
+                    Artigos científicos e publicações
+                    relacionadas ao programa.
+                </p>
+
+                <a
+                    class="botao"
+                    href="#"
+                >
+                    Acessar arquivos
+                </a>
+
+            </div>
+
+
+            <!-- TRABALHOS -->
+
+            <div class="categoria">
+
+                <h3>
+                    Trabalhos
+                </h3>
+
+                <p>
+                    Trabalhos acadêmicos e produções
+                    desenvolvidas no programa.
+                </p>
+
+                <a
+                    class="botao"
+                    href="#"
+                >
+                    Acessar arquivos
+                </a>
+
+            </div>
+
+
+            <!-- PROJETOS -->
+
+            <div class="categoria">
+
+                <h3>
+                    Projetos
+                </h3>
+
+                <p>
+                    Projetos desenvolvidos e relacionados
+                    ao Programa Profissional.
+                </p>
+
+                <a
+                    class="botao"
+                    href="#"
+                >
+                    Acessar arquivos
+                </a>
+
+            </div>
+
+
+            <!-- DOCUMENTOS -->
+
+            <div class="categoria">
+
+                <h3>
+                    Documentos
+                </h3>
+
+                <p>
+                    Documentos e materiais importantes
+                    do programa.
+                </p>
+
+                <a
+                    class="botao"
+                    href="#"
+                >
+                    Acessar arquivos
+                </a>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- SOBRE -->
+
+        <section
+            class="bem-vindo"
+            id="sobre"
+        >
+
+            <h2>
+                Sobre o repositório
+            </h2>
 
             <p>
-                Artigos científicos e publicações
-                relacionadas ao programa.
+                Este repositório foi desenvolvido para
+                organizar e facilitar o acesso aos arquivos
+                e produções do Programa Profissional.
             </p>
 
-            <a class="botao" href="#">
-                Acessar arquivos
-            </a>
-        </div>
+        </section>
 
 
-        <div class="categoria">
-            <h3>Trabalhos</h3>
-
-            <p>
-                Trabalhos acadêmicos e produções
-                desenvolvidas no programa.
-            </p>
-
-            <a class="botao" href="#">
-                Acessar arquivos
-            </a>
-        </div>
+    </main>
 
 
-        <div class="categoria">
-            <h3>Projetos</h3>
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
 
-            <p>
-                Projetos desenvolvidos e relacionados
-                ao Programa Profissional.
-            </p>
-
-            <a class="botao" href="#">
-                Acessar arquivos
-            </a>
-        </div>
-
-
-        <div class="categoria">
-            <h3>Documentos</h3>
-
-            <p>
-                Documentos e materiais importantes
-                do programa.
-            </p>
-
-            <a class="botao" href="#">
-                Acessar arquivos
-            </a>
-        </div>
-
-    </section>
-
-
-    <section class="bem-vindo" id="sobre">
-
-        <h2>Sobre o repositório</h2>
+    <footer>
 
         <p>
-            Este repositório foi desenvolvido para
-            organizar e facilitar o acesso aos arquivos
-            e produções do Programa Profissional.
+            Repositório do Programa Profissional
         </p>
 
-    </section>
+    </footer>
 
-</main>
-
-
-<footer>
-    <p>
-        Repositório do Programa Profissional
-    </p>
-</footer>
 
 </body>
+
 </html>
