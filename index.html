@@ -3,43 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Repositório - Programa Profissional</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background: #f4f6f8;
+            font-family: Arial, sans-serif;
+            background: #f5f7fa;
             color: #222;
         }
 
         header {
-            background: #1f4e79;
+            background: #173f67;
             color: white;
-            padding: 35px 20px;
-            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .topo {
+            max-width: 1100px;
+            margin: auto;
         }
 
         header h1 {
-            margin: 0 0 10px;
+            margin: 0;
             font-size: 32px;
         }
 
         header p {
-            margin: 0;
-            font-size: 17px;
+            margin-top: 8px;
+            font-size: 16px;
+        }
+
+        nav {
+            background: white;
+            border-bottom: 1px solid #ddd;
+            padding: 15px 20px;
+        }
+
+        .menu {
+            max-width: 1100px;
+            margin: auto;
+            display: flex;
+            gap: 25px;
+        }
+
+        .menu a {
+            color: #173f67;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         main {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 30px auto;
             padding: 0 20px;
         }
 
-        .introducao {
+        .bem-vindo {
             background: white;
             padding: 25px;
             border-radius: 12px;
             margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .pesquisa {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+
+        .titulo {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            color: #173f67;
         }
 
         .categorias {
@@ -52,30 +97,41 @@
             background: white;
             padding: 25px;
             border-radius: 12px;
-            text-align: center;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .categoria h2 {
-            color: #1f4e79;
+        .categoria h3 {
+            color: #173f67;
+            margin-top: 0;
         }
 
         .botao {
             display: inline-block;
-            background: #1f4e79;
+            margin-top: 10px;
+            padding: 10px 16px;
+            background: #173f67;
             color: white;
             text-decoration: none;
-            padding: 10px 18px;
-            border-radius: 6px;
-            margin-top: 10px;
+            border-radius: 7px;
         }
 
         footer {
-            text-align: center;
+            margin-top: 50px;
             padding: 25px;
-            margin-top: 40px;
-            background: #222;
+            background: #173f67;
             color: white;
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 25px;
+            }
+
+            .menu {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
         }
     </style>
 </head>
@@ -83,50 +139,88 @@
 <body>
 
 <header>
-    <h1>Programa Profissional</h1>
-    <p>Repositório de arquivos e produções</p>
+    <div class="topo">
+        <h1>Programa Profissional</h1>
+        <p>Repositório de arquivos e produções</p>
+    </div>
 </header>
+
+<nav>
+    <div class="menu">
+        <a href="#">Início</a>
+        <a href="#arquivos">Arquivos</a>
+        <a href="#sobre">Sobre</a>
+    </div>
+</nav>
 
 <main>
 
-    <section class="introducao">
+    <section class="bem-vindo">
         <h2>Bem-vindo ao repositório</h2>
+
         <p>
-            Este site reúne e organiza arquivos e produções
-            relacionados ao Programa Profissional.
+            Este espaço reúne e organiza arquivos,
+            documentos e produções relacionados ao
+            Programa Profissional.
         </p>
-        <p>
-            Os documentos serão disponibilizados por meio de
-            armazenamento em nuvem.
-        </p>
+
+        <input
+            type="text"
+            class="pesquisa"
+            placeholder="Pesquisar arquivos..."
+        >
     </section>
+
+    <h2 class="titulo" id="arquivos">Categorias de arquivos</h2>
 
     <section class="categorias">
 
         <div class="categoria">
-            <h2>Artigos</h2>
-            <p>Artigos e publicações.</p>
-            <a class="botao" href="#">Acessar</a>
+            <h3>Artigos</h3>
+            <p>
+                Artigos científicos e publicações
+                relacionadas ao programa.
+            </p>
+            <a class="botao" href="#">Acessar arquivos</a>
         </div>
 
         <div class="categoria">
-            <h2>Trabalhos</h2>
-            <p>Trabalhos e produções acadêmicas.</p>
-            <a class="botao" href="#">Acessar</a>
+            <h3>Trabalhos</h3>
+            <p>
+                Trabalhos acadêmicos e produções
+                desenvolvidas no programa.
+            </p>
+            <a class="botao" href="#">Acessar arquivos</a>
         </div>
 
         <div class="categoria">
-            <h2>Projetos</h2>
-            <p>Projetos desenvolvidos pelo programa.</p>
-            <a class="botao" href="#">Acessar</a>
+            <h3>Projetos</h3>
+            <p>
+                Projetos desenvolvidos e relacionados
+                ao Programa Profissional.
+            </p>
+            <a class="botao" href="#">Acessar arquivos</a>
         </div>
 
         <div class="categoria">
-            <h2>Documentos</h2>
-            <p>Documentos relacionados ao programa.</p>
-            <a class="botao" href="#">Acessar</a>
+            <h3>Documentos</h3>
+            <p>
+                Documentos e materiais importantes
+                do programa.
+            </p>
+            <a class="botao" href="#">Acessar arquivos</a>
         </div>
 
+    </section>
+
+    <section class="bem-vindo" id="sobre">
+        <h2>Sobre o repositório</h2>
+
+        <p>
+            Este repositório foi desenvolvido para
+            organizar e facilitar o acesso aos arquivos
+            e produções do Programa Profissional.
+        </p>
     </section>
 
 </main>
