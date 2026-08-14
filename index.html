@@ -98,6 +98,10 @@
             padding: 25px;
             border-radius: 12px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+
+            /* Mantém os botões alinhados */
+            display: flex;
+            flex-direction: column;
         }
 
         .categoria h3 {
@@ -105,9 +109,10 @@
             margin-top: 0;
         }
 
-        .botao {
+        .categoria .botao {
             display: inline-block;
-            margin-top: 10px;
+            margin-top: auto;
+            align-self: flex-start;
             padding: 10px 16px;
             background: #173f67;
             color: white;
